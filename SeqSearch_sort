@@ -1,0 +1,106 @@
+Enter file contents here
+ /*
+
+ main文{
+
+		要素数の文字列表示、次に入力する数値numint[] x = new int[num]で要素数が決まる。
+
+		for文は要素数だけ繰り返され配列に入力する。key(探す要素)を入力、
+		その後idxはseqSearchクラスに(配列,要素数,キー値)が代入される。
+		i=0	while(true)は永遠loop, 条件分岐でa[i] == keyならそのiの数の時
+		の配列の数値を返し、要素数は+1をしとく。iが要素数になったのなら捜索失敗
+
+		その返された関数はidxに代入され条件分岐で表記が異なる。
+
+
+		そしていじったプログラムは要素、要素数を乱数で出している。
+
+
+*/
+ import java.util.Random;
+
+
+import java.util.Scanner;
+
+class SeqSearch_sort{
+
+
+//線形捜索関数SeqSearch
+
+		static int seqSearch(int []a,int n,int key){
+			int i=0;
+
+		while(true){
+
+			if(i == n)
+				return -1;
+
+			if(a[i]==key)
+				return i;
+				i++;
+			
+	}
+}
+
+//seqSearch_end
+
+
+
+
+
+	//main関数、入力と表示
+
+
+	public static void main (String[] args){
+		Random  rand  = new Random();
+		Scanner stdIn = new Scanner(System.in);
+
+		System.out.print("要素数:");
+//			int num = stdIn.nextInt();
+			int num = rand.nextInt(1000);
+			
+			int []x = new int[num];					//要素数numの配列
+
+
+
+
+
+
+
+
+
+
+//for_start
+
+
+			for(int i = 0; i < num; i++){
+				 x[i] = rand.nextInt(1000);
+
+				System.out.println("x["+i+"]:"+x[i]);
+//				 x[i] = stdIn.nextInt();
+												 }
+
+
+//for_end
+
+
+
+
+
+
+
+
+                                              //keyの捜索
+			System.out.print("探す値");
+			int ky = stdIn.nextInt();
+
+			int idx = seqSearch(x,num,ky);       //配列xから値がkyの要素摘出
+
+			if (idx == -1)
+				System.out.println("その値の要素は存在しません");
+			else
+				System.out.println("その値はx["+idx+"]にあります。");
+
+		}
+}
+
